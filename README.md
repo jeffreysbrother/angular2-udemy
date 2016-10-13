@@ -67,7 +67,7 @@ What if we want to add markup inside of custom elements? Imagine we have the fol
 
 ```
 @Component({
-  selector: 'fa-other',
+  selector: 'fa-app',
   template: '
     <fa-container>
       <div>
@@ -88,7 +88,7 @@ What if we want to add markup inside of custom elements? Imagine we have the fol
 
 ```
 @Component({
-  selector: 'fa-different',
+  selector: 'fa-container',
   template: '
     <article></article>
   ',
