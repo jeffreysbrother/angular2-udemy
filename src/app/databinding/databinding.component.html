@@ -14,6 +14,5 @@
   <h3>Binding to Custom Properties</h3>
   <app-property-binding [result]="10"></app-property-binding>
   <h3>Event Binding</h3>
-  <app-event-binding></app-event-binding>
-  <h3>Binding to Custom Events</h3>
+  <app-event-binding (clicked)="onClicked($event)"></app-event-binding>
 </div>
