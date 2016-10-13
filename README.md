@@ -130,4 +130,21 @@ Angular, by default, throws away everything within these custom tags and inserts
 
 ###Two-way Binding
 
-Not the default in Angular 2; it's slow and has some problems. We're often fine without it.
+Not the default in Angular 2; it's slow and has some problems. We're often fine without it. Here is an example of how to configure this:
+
+```
+@Component({
+  selector: 'app-two-way-binding',
+  template: `
+    <input type="text" [(ngModel)]="person.name">
+    <input type="text" [(ngModel)]="person.name">
+  `
+})
+export class TwoWayBindingComponent {
+  person = {
+    name: 'Max',
+    age: 33
+  };
+}
+
+```
