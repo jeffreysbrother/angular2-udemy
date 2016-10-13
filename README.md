@@ -41,3 +41,14 @@ If we want to include inline templates or styles in `app.component.ts`, we can u
 ```
 
 More substantial templates or styles should be included in external files (`app.component.html` and `app.component.css`).
+
+###Adding new components
+
+To create a new component using the CLI, we type `ng generate component new-thing`. This will create a directory called "new-thing" within the app directory. In here, we will see four new files:
+
+* new-thing.component.css
+* new-thing.component.html
+* new-thing.component.spec.ts
+* new-thing.component.ts
+
+This component is intended to be instered into <app-root>, not alongside it. This is done by adding the tags <fa-other></fa-other> into `app.component.ts` (if the value of the "selector" property in the new component is "fa-other"). Keep in mind that when we ask the CLI to generate a new component, it also adds the name of that component as a value to the "declarations" property in the `app.module.ts` file.
