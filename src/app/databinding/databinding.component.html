@@ -1,5 +1,14 @@
-<p>
-  {{stringInterpolation}} | {{numberInterpolation}}
-</p>
 
-<p>Above is an example of how we can interpolate strings and numbers in Angular</p>
+<div>
+  <h1>Databinding Component</h1>
+  <h3>Interpolation Example</h3>
+  <p>Result of string interpolation: <b>{{stringInterpolation}}</b></p>
+  <p>Result of number interpolation: <b>{{numberInterpolation}}</b></p>
+  <p>Above is an example of how we can interpolate strings and numbers in Angular</p>
+  <h3>Property Binding Example</h3>
+  <input type="text" value="{{stringInterpolation}}">
+  <input type="text" [value]="stringInterpolation">
+  <p [ngClass]="{redBorder: true}">Is this styled?</p>
+  <p [ngClass]="{redBorder: onTest()}">Is this styled?</p>
+  <p [ngStyle]="{color: 'green'}">Is this styled?</p>
+</div>

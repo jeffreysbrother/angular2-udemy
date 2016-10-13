@@ -1,0 +1,13 @@
+div {
+  border: 2px solid gray;
+  padding: 5px;
+}
+
+input {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.redBorder {
+  border: 1px solid red;
+}
