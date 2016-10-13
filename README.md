@@ -21,3 +21,23 @@ Decorators (`@Component`) allow us to transform normal Typescript classes into s
 The index.html at the root our our `src/` directory is the only file that gets loaded by the server (since Angular is a single-page application framework). This is where we insert our components. Since this HTML file does not have any script tags, how is it that we start or load the Angular app?
 
 The CLI will dynamically add the script imports whenever we run the application; they are added during the compilation/build step. `main.bundle.js` (which can be seen by inspecting element after running the app) contains our code plus all the Angular and 3rd party code. This file also starts our application. The `main.ts` file is the first file to be executed. This bootstraps the `app.module.ts` module, which in turn bootstraps the `app.component.ts` file. We tell Angular that this will be our root component, it recognizes the selector, and then knows that the component template must be rendered in the `index.html` file where it finds the matching selector.
+
+###Templates and Styles
+
+If we want to include inline templates or styles in `app.component.ts`, we can use backticks in order to take advantage of template literals:
+
+```Typescript
+@Component({
+  selector: 'app-root',
+  templateUrl: `
+    <h1>just like this</h1>
+  `,
+  styleUrls: [`
+    h1 {
+      font-size: 40px;
+    }
+  `]
+})
+```
+
+More substantial templates or styles should be included in external files (`app.component.html` and `app.component.css`).
