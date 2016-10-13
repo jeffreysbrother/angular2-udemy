@@ -51,4 +51,4 @@ To create a new component using the CLI, we type `ng generate component new-thin
 * new-thing.component.spec.ts
 * new-thing.component.ts
 
-This component is intended to be instered into <app-root>, not alongside it. This is done by adding the tags <fa-other></fa-other> into `app.component.ts` (if the value of the "selector" property in the new component is "fa-other"). Keep in mind that when we ask the CLI to generate a new component, it also adds the name of that component as a value to the "declarations" property in the `app.module.ts` file.
+This component is intended to be instered into `<app-root>`, not alongside it. This is done by adding the tags `<fa-other></fa-other>` into `app.component.ts` (if the value of the "selector" property in the new component is "fa-other"). Keep in mind that when we ask the CLI to generate a new component, it also adds the name of that component as a value to the "declarations" property in the `app.module.ts` file.
