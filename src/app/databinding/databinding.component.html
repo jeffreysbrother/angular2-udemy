@@ -5,7 +5,7 @@
   <p>Result of string interpolation: <b>{{stringInterpolation}}</b></p>
   <p>Result of number interpolation: <b>{{numberInterpolation}}</b></p>
   <p>Above is an example of how we can interpolate strings and numbers in Angular</p>
-  <h3>Property Binding Example</h3>
+  <h3>Property Binding</h3>
   <input type="text" value="{{stringInterpolation}}">
   <input type="text" [value]="stringInterpolation">
   <p [ngClass]="{redBorder: true}">Is this styled?</p>
@@ -13,4 +13,7 @@
   <p [ngStyle]="{color: 'green'}">Is this styled?</p>
   <h3>Binding to Custom Properties</h3>
   <app-property-binding [result]="10"></app-property-binding>
+  <h3>Event Binding</h3>
+  <app-event-binding></app-event-binding>
+  <h3>Binding to Custom Events</h3>
 </div>
