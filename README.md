@@ -60,3 +60,24 @@ It is a good idea to create prefixed (e.g. "fa-form" or "js-form") selector valu
 ###View encapsulation and styling
 
 Angular is able to encapsulate styles (restrict styles to certain components) by inserting unique attributes onto certain elements. We can observe this by inspecting element on some element; we will see attributes that look something like `_ngcontent-dhu-2`. The styles (which are ultimately inserted into the head of the document) will utilize attribute selectors that target these generated attributes.
+
+###Inserting Content
+
+What if we want to add markup inside of custom elements? Imagine we have the following code in our custom component:
+
+```angular
+@Component({
+  selector: 'fa-other',
+  template: '
+    <fa-container>
+      <div>
+        <h2>Hello</h2>
+        <p>World</p>
+      </div>
+    </fa-container>
+  ',
+  styles: ['./other.component.css']
+})
+```
+
+Angular, by default, will throw away everything within these custom tags and inserts the content of your component template. To carry this out successfully, we need to use `ng-content`:
