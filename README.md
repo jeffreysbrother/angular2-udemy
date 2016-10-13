@@ -44,7 +44,7 @@ More substantial templates or styles should be included in external files (`app.
 
 ###Adding new components
 
-To create a new component using the CLI, we type `ng generate component new-thing`. This will create a directory called "new-thing" within the app directory. In here, we will see four new files:
+To create a new component using the CLI, we type `ng generate component new-thing`. You may also use the shorthand `ng g c new-thing`. This will create a directory called "new-thing" within the app directory. In here, we will see four new files:
 
 * new-thing.component.css
 * new-thing.component.html
