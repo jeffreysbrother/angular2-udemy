@@ -63,9 +63,9 @@ Angular is able to encapsulate styles (restrict styles to certain components) by
 
 ###Inserting Content
 
-What if we want to add markup inside of custom elements? Imagine we have the following code in our custom component:
+What if we want to add markup inside of custom elements? Imagine we have the following code in our main `app.component.ts`:
 
-```angular
+```
 @Component({
   selector: 'fa-other',
   template: '
@@ -76,8 +76,28 @@ What if we want to add markup inside of custom elements? Imagine we have the fol
       </div>
     </fa-container>
   ',
-  styles: ['./other.component.css']
+  styles: ['
+    h1 {
+      color: red;
+    }
+  ']
 })
 ```
 
-Angular, by default, will throw away everything within these custom tags and inserts the content of your component template. To carry this out successfully, we need to use `ng-content`:
+...and this code in our custom component:
+
+```
+@Component({
+  selector: 'fa-different',
+  template: '
+    <article></article>
+  ',
+  styles: ['
+    article {
+      border: 2px solid gray;
+    }
+  ']
+})
+```
+
+Angular, by default, throws away everything within these custom tags and inserts the content of your component template. To carry this out successfully, we need to place `<ng-content></ng-content>` between the article tags.
