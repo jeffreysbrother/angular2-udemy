@@ -52,3 +52,11 @@ To create a new component using the CLI, we type `ng generate component new-thin
 * new-thing.component.ts
 
 This component is intended to be inserted into `<app-root>`, not alongside it. This is done by adding the tags `<fa-other></fa-other>` into `app.component.ts` (if the value of the "selector" property in the new component is "fa-other"). Keep in mind that when we ask the CLI to generate a new component, it also adds the value of the selector of that component as a value of the "declarations" property AND the name of the file as the associated import in the `app.module.ts` file. (Also keep in mind that the selector needn't be the same as the name of the file).
+
+###Unique selectors
+
+It is a good idea to create prefixed (e.g. "fa-form" or "js-form") selector values in order to avoid clashing with future HTML tags, etc.
+
+###View encapsulation and styling
+
+Angular is able to encapsulate styles (restrict styles to certain components) by inserting unique attributes onto certain elements. We can observe this by inspecting element on some element; we will see attributes that look something like `_ngcontent-dhu-2`. The styles (which are ultimately inserted into the head of the document) will utilize attribute selectors that target these generated attributes.
