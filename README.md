@@ -125,4 +125,9 @@ Angular, by default, throws away everything within these custom tags and inserts
 ###Custom Bindings
 
 **Property Binding**: `@Input() propertyName: string;`
+
 **Event Binding**: `@Output() eventName: new EventEmmitter();`
+
+###Two-way Binding
+
+Not the default in Angular 2; it's slow and has some problems. We're often fine without it.
