@@ -101,3 +101,28 @@ What if we want to add markup inside of custom elements? Imagine we have the fol
 ```
 
 Angular, by default, throws away everything within these custom tags and inserts the content of your component template. To carry this out successfully, we need to place `<ng-content></ng-content>` between the article tags. This will allow us to render HTML content within other components.
+
+###Property & Event Binding Syntax
+
+**DOM properties (native)**
+```html
+<img [src]="...">
+<img (click)="...">
+```
+
+**Directive properties (built into Angular)**
+```html
+<img [ngClass]="...">
+<img (ngSubmit)="...">
+```
+
+**Component properties (built into Angular)**
+```html
+<cmp [initObj]="...">
+<cmp (rndEvent)="...">
+```
+
+###Custom Bindings
+
+**Property Binding**: `@Input() propertyName: string;`
+**Event Binding**: `@Output() eventName: new EventEmmitter();`
